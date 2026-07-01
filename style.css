@@ -1,0 +1,207 @@
+:root {
+    --g-color: #00ff66;
+    --bg-dark: #050805;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--g-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Dashboard Overlay Styles */
+.dashboard-container {
+    text-align: center;
+    max-width: 500px;
+    width: 90%; 
+    padding: 40px 20px;
+    border: 1px dashed var(--g-color);
+    background: rgba(0,0,0,0.95);
+    box-shadow: 0 0 30px rgba(0, 255, 102, 0.05);
+    box-sizing: border-box;
+}
+
+.glitch-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 12px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 8px var(--g-color);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.terminal-boot-log {
+    text-align: left;
+    background: #000;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.75rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.status-ok {
+    float: right;
+    color: #fff;
+    background: rgba(0, 255, 102, 0.2);
+    padding: 0 4px;
+}
+
+.start-btn {
+    background: transparent;
+    border: 1px solid var(--g-color);
+    color: var(--g-color);
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+    background: var(--g-color);
+    color: #000;
+    box-shadow: 0 0 25px var(--g-color);
+}
+
+.footer-tag {
+    margin-top: 30px;
+    font-size: 0.65rem;
+    opacity: 0.4;
+}
+
+/* Main Workspace Styles */
+.terminal-interface {
+    border: 2px solid var(--g-color);
+    background: #000;
+    padding: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95vw; 
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.display-box {
+    border: 1px solid rgba(0, 255, 102, 0.4);
+    background-color: #000;
+    padding: 5px;
+    overflow-x: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ascii-container {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.65vw; 
+    line-height: 0.75;
+    letter-spacing: 0px;
+    white-space: pre;
+    font-weight: bold;
+    text-shadow: 0 0 2px currentColor;
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+.control-panel {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    font-size: 11px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-group label {
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+input[type="range"], select, .action-btn, input[type="file"] {
+    background: #111;
+    border: 1px solid var(--g-color);
+    color: var(--g-color);
+    padding: 4px;
+    font-family: monospace;
+    outline: none;
+}
+
+input[type="file"] {
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.action-btn {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.half-btn {
+    grid-column: span 1;
+}
+
+.action-btn:hover {
+    background: var(--g-color);
+    color: #000;
+}
+
+.hidden { display: none !important; }
+#webcam, #hidden-canvas, #hidden-img { display: none; }
+
+@media (max-width: 768px) {
+    .glitch-title {
+        font-size: 1.8rem; 
+        letter-spacing: 6px;
+    }
+
+    #ascii-container {
+        font-size: 1.25vw; 
+    }
+
+    .control-panel {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+    
+    .terminal-interface {
+        width: 95%;
+        padding: 10px;
+    }
+}

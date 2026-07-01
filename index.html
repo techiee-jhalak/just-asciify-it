@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII-Yourself</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="dashboard-overlay" class="dashboard-container">
+        <div class="glitch-title">ASCIIFY.IT</div>
+        <div class="subtitle">JUST BLINK AND ASCIIFY YOURSELF</div>
+        
+        <div class="terminal-boot-log">
+            <p>> INITIALIZING CORE IMAGING SUBROUTINES... <span class="status-ok">OK</span></p>
+            <p>> PARSING RENDER ENGINE CHARACTER MATRICES... <span class="status-ok">READY</span></p>
+            <p>> CALIBRATING LUMA THRESHOLDS... <span class="status-ok">STABLE</span></p>
+        </div>
+
+        <button id="btn-start-core" class="start-btn">START VISUALIZING YOURSELF</button>
+        <div class="footer-tag">@TECHIEE-JHALAK // INFRASTRUCTURE SECURE</div>
+    </div>
+
+    <div id="app-workspace" class="terminal-interface hidden">
+        <div class="header">[  ASCIIFY.IT  -->  L I V E .  C O D E .  F E E D  ]</div>
+        
+        <div class="display-box">
+            <pre id="ascii-container"></pre>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-group">
+                <label>Font Size (<span id="lbl-size">10px</span>)</label>
+                <input type="range" id="param-size" min="6" max="20" value="10">
+            </div>
+            
+            <div class="control-group">
+                <label>Gain (<span id="lbl-gain">1.0</span>)</label>
+                <input type="range" id="param-gain" min="0.5" max="3.0" step="0.1" value="1.0">
+            </div>
+
+            <div class="control-group">
+                <label>Contrast (<span id="lbl-contrast">1.0</span>)</label>
+                <input type="range" id="param-contrast" min="0.5" max="3.0" step="0.1" value="1.0">
+            </div>
+
+            <div class="control-group">
+                <label>Character Set</label>
+                <select id="param-mode">
+                    <option value="simple">Simple</option>
+                    <option value="complex">Complex</option>
+                    <option value="binary">Binary</option>
+                    <option value="blocks">Blocks</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Color Mode</label>
+                <select id="param-color">
+                    <option value="matrix">Matrix Green</option>
+                    <option value="cyan">Cyber Cyan</option>
+                    <option value="pink">Neon Pink</option>
+                    <option value="purple">Deep Purple</option>
+                    <option value="red">Crimson Red</option>
+                    <option value="yellow">Neon Yellow</option>
+                    <option value="cyber">RGB Mode</option>
+                    <option value="bw">Black & White</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Upload Media</label>
+                <input type="file" id="param-upload" accept="image/*, video/*">
+            </div>
+
+            <button id="btn-screenshot-txt" class="action-btn half-btn">EXPORT .TXT</button>
+            <button id="btn-screenshot-png" class="action-btn half-btn">EXPORT HIGH-RES .PNG</button>
+        </div>
+    </div>
+
+    <video id="webcam" autoplay playsinline muted loop></video>
+    <img id="hidden-img" alt="uploaded asset processing layer">
+    <canvas id="hidden-canvas"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
