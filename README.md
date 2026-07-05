@@ -16,7 +16,7 @@ An interactive, browser-based terminal workspace that converts webcams, images, 
 
 ---
 
-## 🎨 Render Configurations
+## 🎨 Render Configurations ~
 
 ### 1. Character Matrix Patterns
 You can switch the structural density framework using the pattern selector:
